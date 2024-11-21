@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dari Pociyyy untuk Kamu <3 </title>
+    <link rel="stylesheet" href="styleGlobal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="question-container">
+        <p id="question">Haloo, assalamu'alaikum...gimanaa hari ini??</p>
+        <div class="col-button">
+            <button class="button--wayra button" onclick="handleAnswer('alhamdulillah')">Alhamdulillah</button>
+            <button class="button--wayra button" onclick="handleAnswer('ngeselin')">Ngeselin</button>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h5>dari: Pociyyy</h5>
+    </div>
+
+
+    <script>
+        let currentQuestion = 1;
+
+        function handleAnswer(answer) {
+            const questionContainer = document.getElementById("question-container");
+
+            switch (currentQuestion) {
+                case 1:
+                    if (answer === 'bad') {
+                        questionContainer.innerHTML = `
+                            <p id="question">Okay it’s fine, Hope your day will be fine!</p>
+                        `;
+                        break;
+                    }
+                    questionContainer.innerHTML = `
+                        <p id="question">Lha hari ini capee ga???</p>
+                        <div class="col-button">
+                        <button class="button--wayra button" onclick="handleAnswer('tiredCape')">Capepoll</button>
+                        <button class="button--wayra button" onclick="handleAnswer('tiredDikit')">Dikit</button>
+                        </div>
+                    `;
+                    break;
+                case 2:
+                    questionContainer.innerHTML = `
+                        <p id="question">Tau gaa? aku punya sesuatuu lho hehehe</p>
+                        <div class="col-button">
+                        <button class="button--wayra button" onclick="handleAnswer('apatuh')">Apa tuh?</button>
+                        <button class="button--wayra button" onclick="handleAnswer('engga')">Engga</button>
+                        </div>
+                    `;
+                    break;
+                case 3:
+                    questionContainer.innerHTML = `
+                        <p id="question">mmm, aku ada dikit kata2, "Hidup itu seperti bunga, kita ngga tau tuh kapan mekarnya, tapi yang pasti, ia akan mekar pada waktunya.", iya ga??
+</p>
+                        <div class="col-button">
+                        <button class="button--wayra button" onclick="handleAnswer('why')">Iya</button>
+                        <button class="button--wayra button" onclick="handleAnswer('nope')">Ngga</button>
+                        <div>
+                    `;
+                    break;
+                case 4:
+                    questionContainer.innerHTML = `
+                        <p id="question">Ya karena Hidup penuh dengan misteri dan hal-hal yang gabisa kita prediksi, sama kayak bunga yang kita ngga tahu kapan mekarnya. mungkin Hal ini kayak mencerminkan kalo proses kehidupan sering kali berjalan di luar kendali manusia.</p>
+                        <button class="button--wayra button" onclick="handleAnswer('thanks')">Benerrrr</button>
+                    `;
+                    break;
+                case 5:
+                    questionContainer.innerHTML = `
+                        <p id="question">karena bahas bahas bunga, yaudaade kukasi bungaa wkwk, walau bunga virtual gapapa ya WKWKWK</p>
+                        <a href="flowers.html"> <button class="button--wayra button" onclick="handleAnswer('andYouWantTo')">klik disini</button> </a>
+                    `;
+                    break;
+                default:
+                    if (answer === 'tiredNope') {
+                        questionContainer.innerHTML = `
+                            <p id="question">Okay it’s fine, Hope your day will be fine!</p>
+                        `;
+                        break;
+                    } else if (answer === 'tiredYea') {
+                        currentQuestion = 1;
+                    }
+                    break;
+            }
+
+            currentQuestion++;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
